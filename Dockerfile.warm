@@ -1,0 +1,2 @@
+FROM 114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack
+

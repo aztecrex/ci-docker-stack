@@ -1,9 +1,15 @@
 stack:
   build:
-    image: 114272735376.dkr.ecr.us-east-a.amazonaws.com/gwiley/lambda-stack
+    image: 114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack
     dockerfile_path: Dockerfile
-aws_generator: 
+    cache: true
+stack_warm:
+  build:
+    image: 114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack-warm
+    dockerfile_path: Dockerfile.warm
+    cache: true
+aws_generator:
   image: codeship/aws-ecr-dockercfg-generator
   encrypted_env_file: aws_creds.encrypted
   add_docker: true
-
+  cache: true
