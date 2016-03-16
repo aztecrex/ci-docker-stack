@@ -1,10 +1,17 @@
 - service: stack
   command: /bin/true
-- service: stack_warm
-  command: /bin/true
+
 - type: push
   service: stack
   registry: https://114272735376.dkr.ecr.us-east-1.amazonaws.com
   image_name:  114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack
   dockercfg_service: aws_generator
 
+- service: stack_warm
+  command: /bin/true
+
+- type: push
+  service: stack
+  registry: https://114272735376.dkr.ecr.us-east-1.amazonaws.com
+  image_name:  114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack-warm
+  dockercfg_service: aws_generator
