@@ -11,5 +11,43 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Lib
-  build-depends:       base
+  build-depends:
+    aeson,
+    attoparsec,
+    base,
+    base64-bytestring,
+    bcrypt,
+    blaze-builder,
+    bytestring,
+    case-insensitive,
+    conduit,
+    containers,
+    cookie,
+    either,
+    email-validate,
+    extra,
+    free,
+    hspec-wai-json,
+    hspec-wai,
+    hspec,
+    http-conduit,
+    http-types,
+    jwt,
+    lucid,
+    mtl,
+    postgresql-simple,
+    QuickCheck,
+    random,
+    retry,
+    scotty,
+    semigroups,
+    sqlite-simple,
+    text,
+    time,
+    transformers,
+    url,
+    wai-cors,
+    wai-extra,
+    wai
+
   default-language:    Haskell2010
