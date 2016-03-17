@@ -2,8 +2,6 @@ stack:
   build:
     image: 114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack
     dockerfile_path: Dockerfile
-  cached: true
-  dockercfg_service: aws_generator
 stack_warm:
   build:
     image: 114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack-warm
