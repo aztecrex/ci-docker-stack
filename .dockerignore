@@ -3,6 +3,9 @@ Dockerfile
 Dockerfile.*
 codeship.aes
 aws_creds.env
-
+codeship-services.yml
+codeship-steps.yml
+README.md
+tmp
 **/.stack-work
 
