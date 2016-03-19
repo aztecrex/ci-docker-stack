@@ -1,6 +1,6 @@
 stack:
   build:
     dockerfile_path: Dockerfile
-  cache:
-    image: cjengineering/ci-maybe-pull
-    add_docker: true
+cache:
+  image: cjengineering/ci-maybe-pull
+  add_docker: true
