@@ -8,21 +8,16 @@
   steps:
     - service: cache
       command: &IMAGE cjengineering/haskell-stack
-    - type: push
-      service: stack
-      tag: master
+    - type: serial
       registry: &REGISTRY https://index.docker.io/v1/
-      command: &IMAGE cjengineering/haskell-stack
-      image_tag: latest
-    - type: push
       service: stack
-      tag: master
-      registry: *REGISTRY
       image_name: *IMAGE
-      image_tag: "commit-{{.CommitID}}"
-    - type: push
-      service: stack
-      registry: *REGISTRY
-      image_name: *IMAGE
-      image_tag: "branch-{{.Branch}}"
-
+      steps:
+      - type: push
+        tag: master
+        image_tag: latest
+      - type: push
+        tag: master
+        image_tag: "commit-{{.CommitID}}"
+      - type: push
+        image_tag: "branch-{{.Branch}}"
