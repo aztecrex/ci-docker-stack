@@ -4,20 +4,20 @@
 
 - type: serial
   tag: ^[^_]
-  dockercfg_service: aws_generator
+  encrypted_dockercfg_path: dockercfg.encrypted
   steps:
     - type: push
       service: stack
       tag: master
-      registry: &REGISTRY https://114272735376.dkr.ecr.us-east-1.amazonaws.com
-      image_name:  &IMAGE 114272735376.dkr.ecr.us-east-1.amazonaws.com/official/haskell-stack
+      registry: &REGISTRY https://index.docker.io/v1/
+      image_name:  &IMAGE aztecrex/haskell-stack
       image_tag: latest
     - type: push
       service: stack
       tag: master
       registry: *REGISTRY
       image_name: *IMAGE
-      image_tag: "{{.CommitID}}"
+      image_tag: "commit-{{.CommitID}}"
     - type: push
       service: stack
       registry: *REGISTRY
