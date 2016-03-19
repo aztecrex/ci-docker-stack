@@ -1,15 +1,26 @@
+- service: stack
+  tag: ^$
+  command: /bin/true
+
 - type: serial
+  tag: ^[^_]
   dockercfg_service: aws_generator
   steps:
-    - service: stack
-      command: /bin/true
-    - service: stack_warm
-      command: /bin/true
     - type: push
       service: stack
-      registry: https://114272735376.dkr.ecr.us-east-1.amazonaws.com
-      image_name:  114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack
+      tag: master
+      registry: &REGISTRY https://114272735376.dkr.ecr.us-east-1.amazonaws.com
+      image_name:  &IMAGE 114272735376.dkr.ecr.us-east-1.amazonaws.com/official/haskell-stack
+      image_tag: latest
     - type: push
-      service: stack_warm
-      registry: https://114272735376.dkr.ecr.us-east-1.amazonaws.com
-      image_name:  114272735376.dkr.ecr.us-east-1.amazonaws.com/gwiley/lambda-stack-warm
+      service: stack
+      tag: master
+      registry: *REGISTRY
+      image_name: *IMAGE
+      image_tag: "{{.CommitID}}"
+    - type: push
+      service: stack
+      registry: *REGISTRY
+      image_name: *IMAGE
+      image_tag: "branch-{{.Branch}}"
+
