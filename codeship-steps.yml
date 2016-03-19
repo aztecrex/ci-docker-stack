@@ -6,11 +6,15 @@
   tag: ^[^_]
   encrypted_dockercfg_path: dockercfg.encrypted
   steps:
+    - service: cache
+      command: "cjengineering/haskell-stack:branch-{{.Branch}}"
+    - service: cache
+      command: cjengineering/haskell-stack:master
     - type: push
       service: stack
       tag: master
       registry: &REGISTRY https://index.docker.io/v1/
-      image_name:  &IMAGE cjengineering/haskell-stack
+      command: &IMAGE cjengineering/haskell-stack
       image_tag: latest
     - type: push
       service: stack
