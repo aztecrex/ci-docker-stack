@@ -10,7 +10,7 @@
       service: stack
       tag: master
       registry: &REGISTRY https://index.docker.io/v1/
-      image_name:  &IMAGE aztecrex/haskell-stack
+      image_name:  &IMAGE cjengineering/haskell-stack
       image_tag: latest
     - type: push
       service: stack
