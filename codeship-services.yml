@@ -2,5 +2,5 @@ stack:
   build:
     dockerfile_path: Dockerfile
 cache:
-  image: cjengineering/ci-maybe-pull
+  image: cjengineering/codeship-warm-cache
   add_docker: true

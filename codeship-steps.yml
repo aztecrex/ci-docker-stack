@@ -7,9 +7,7 @@
   encrypted_dockercfg_path: dockercfg.encrypted
   steps:
     - service: cache
-      command: "cjengineering/haskell-stack:branch-{{.Branch}}"
-    - service: cache
-      command: cjengineering/haskell-stack:master
+      command: &IMAGE cjengineering/haskell-stack
     - type: push
       service: stack
       tag: master
