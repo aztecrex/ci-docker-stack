@@ -1,0 +1,55 @@
+name:                config
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+license:             PublicDomain
+category:            Meta
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:
+    aeson,
+    attoparsec,
+    base,
+    base64-bytestring,
+    bcrypt,
+    blaze-builder,
+    bytestring,
+    case-insensitive,
+    conduit,
+    containers,
+    cookie,
+    either,
+    email-validate,
+    extra,
+    free,
+    hspec-wai-json,
+    hspec-wai,
+    hspec,
+    http-conduit,
+    http-types,
+    jwt,
+    lucid,
+    mime-mail-ses,
+    mime-mail,
+    mtl,
+    postgresql-simple,
+    QuickCheck,
+    random,
+    retry,
+    scotty,
+    semigroups,
+    sqlite-simple,
+    text,
+    time,
+    transformers,
+    url,
+    wai-cors,
+    wai-extra,
+    wai
+
+  default-language:    Haskell2010
