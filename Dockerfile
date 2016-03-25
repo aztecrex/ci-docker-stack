@@ -41,3 +41,9 @@ COPY template/config-0400-2 /tmp/config
 WORKDIR /tmp/config
 RUN  stack build \
   && rm -rf /tmp/config
+
+# stack resolver for 4.0, dependencies layer 3
+COPY template/config-0400-3 /tmp/config
+WORKDIR /tmp/config
+RUN  stack build \
+  && rm -rf /tmp/config
