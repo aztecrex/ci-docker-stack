@@ -60,3 +60,8 @@ WORKDIR /tmp/config
 RUN  stack build \
   && rm -rf /tmp/config
 
+# stack resolver for 6.0, dependencies layer 0
+COPY template/config-0600-0 /tmp/config
+WORKDIR /tmp/config
+RUN  stack build \
+  && rm -rf /tmp/config
