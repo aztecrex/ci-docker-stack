@@ -1,0 +1,22 @@
+name: config
+version: '0.0.0'
+
+extra-source-files:
+- package.yaml
+- stack.yaml
+
+ghc-options: -Wall
+
+library:
+  source-dirs: library
+  dependencies:
+  - base
+  - containers
+  - hspec
+  - hspec-discover
+  - interpolate
+  - iproute
+  - lens
+  - MissingH
+  - mtl
+  - text
