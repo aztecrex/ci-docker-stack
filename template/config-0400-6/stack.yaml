@@ -1,0 +1,10 @@
+resolver: lts-4.0
+packages:
+- '.'
+extra-deps:
+- crockford-0.2
+- data-bword-0.1
+- data-dword-0.3
+flags: {}
+extra-package-dbs: []
+
