@@ -3,8 +3,10 @@ packages:
 - '.'
 extra-deps:
 - crockford-0.2
+- crypto-pubkey-openssh-0.2.7
 - data-bword-0.1
 - data-dword-0.3
+- text-conversions-0.2.0
+
 flags: {}
 extra-package-dbs: []
-

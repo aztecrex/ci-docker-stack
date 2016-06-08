@@ -12,6 +12,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Lib
   build-depends:
+    aeson-better-errors,
     aeson,
     amazonka-ses,
     amazonka,
@@ -58,12 +59,13 @@ library
     scotty,
     semigroups,
     sqlite-simple,
+    text-conversions,
     text,
     time,
     transformers,
     url,
-    wai,
     wai-cors,
-    wai-extra
+    wai-extra,
+    wai
 
   default-language:    Haskell2010
