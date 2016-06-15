@@ -77,3 +77,16 @@ COPY template/config-0400-6 /tmp/config
 WORKDIR /tmp/config
 RUN  stack build \
   && rm -rf /tmp/config
+
+# external dependencies for 4.0, dependencies layer 7
+RUN  apt-get update \
+  && apt-get install -y \
+           libssl-dev \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+# stack resolver for 4.0, dependencies layer 7
+COPY template/config-0400-7 /tmp/config
+WORKDIR /tmp/config
+RUN  stack build \
+  && rm -rf /tmp/config
