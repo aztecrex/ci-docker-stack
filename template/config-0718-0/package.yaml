@@ -1,0 +1,74 @@
+name: config
+version: '0.0.0'
+
+extra-source-files:
+- package.yaml
+- stack.yaml
+
+ghc-options: -Wall
+
+library:
+  source-dirs: library
+  dependencies:
+  - aeson
+  - aeson-better-errors
+  - amazonka
+  - amazonka-ses
+  - base
+  - base16-bytestring
+  - base64-bytestring
+  - bcrypt
+  - blaze-builder
+  - bytestring
+  - case-insensitive
+  - conduit
+  - containers
+  - cookie
+  - crockford
+  - data-default
+  - data-dword
+  - either
+  - email-validate
+  - errors
+  - exceptions
+  - extra
+  - free
+  - HandsomeSoup
+  - HsOpenSSL
+  - hspec
+  - hspec-wai
+  - hspec-wai-json
+  - http-client
+  - http-conduit
+  - http-types
+  - hxt
+  - iso8601-time
+  - jwt
+  - lens
+  - lens-aeson
+  - lucid
+  - megaparsec
+  - mime-mail
+  - monad-control
+  - mtl
+  - network-uri
+  - postgresql-simple
+  - QuickCheck
+  - random
+  - resource-pool
+  - resourcet
+  - retry
+  - safe
+  - scotty
+  - semigroups
+  - sqlite-simple
+  - test-fixture
+  - text
+  - text-conversions
+  - time
+  - transformers
+  - url
+  - uuid
+  - wai
+  - wai-cors
+  - wai-extra

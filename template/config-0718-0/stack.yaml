@@ -1,0 +1,13 @@
+resolver: lts-7.18
+
+packages:
+- '.'
+
+extra-deps:
+- crockford-0.2
+- crypto-pubkey-openssh-0.2.7
+- data-bword-0.1.0.1
+- data-dword-0.3.1
+
+flags: {}
+extra-package-dbs: []
