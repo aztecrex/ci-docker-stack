@@ -90,3 +90,15 @@ COPY template/config-0400-7 /tmp/config
 WORKDIR /tmp/config
 RUN  stack build \
   && rm -rf /tmp/config
+
+COPY template/config-0718-0 /tmp/config
+WORKDIR /tmp/config
+RUN  stack setup \
+  && stack build \
+  && rm -rf /tmp/config
+
+COPY template/config-0802-0 /tmp/config
+WORKDIR /tmp/config
+RUN  stack setup \
+  && stack build \
+  && rm -rf /tmp/config
